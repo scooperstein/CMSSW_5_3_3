@@ -1,0 +1,204 @@
+
+import FWCore.ParameterSet.Config as cms
+
+process = cms.Process("ANALYSIS")
+
+process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_cff')
+process.GlobalTag.globaltag = 'GR_R_52_V8::All'
+
+process.maxEvents = cms.untracked.PSet(
+    input = cms.untracked.int32(100)
+)
+
+process.source = cms.Source("PoolSource",
+    fileNames = cms.untracked.vstring(# $inputFileNames
+#'file:/hdfs/store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleElectron_Run2012A_13Jul2012_v1/patTuple_cfg-FEF00566-40D6-E111-B18B-003048FFD760.root'
+#'file:/hdfs/store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleElectron_Run2012B_13Jul2012_v1/patTuple_cfg-FEF2C1C5-DAD7-E111-A2B7-0030486792DE.root'
+#'file:/hdfs/store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleElectron_Run2012C_PromptReco_v2_Run201265_203755/patTuple_cfg-FEF23F9E-84F5-E111-A515-003048F118D2.root'
+#'file:/hdfsstore/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleElectron_Run2012C_PromptReco_v2_Run201265_203755/patTuple_cfg-FEF23F9E-84F5-E111-A515-003048F118D2.root'
+'file:/hdfs/store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleElectron_Run2012C_PromptReco_v2_Run198934_201264/patTuple_cfg-8036B345-43DE-E111-A18F-003048D37456.root'
+#'file:/hdfs/store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleElectron_Run2012A_13Jul2012_v1/patTuple_cfg-E0136F9E-30D6-E111-BD7F-002618FDA237.root'
+#'file:/hdfs/store/user/tapas/2012-08-30-8TeV-PatTuple/data_SingleElectron_Run2012C_PromptReco_v2_Run198934_201264/1/patTuple_cfg-803ECF43-34D5-E111-A1D0-E0CB4E5536AE.root'
+#'file:/hdfs/store/user/cepeda/SingleElectron/data_SingleElectron_Run2012B_PromptReco_v1_a_2012-05-29-8TeV-PatTuple-67c1f94/a7f10efca7dd683ad59c7e946715fa59/output_303_1_SdJ.root'
+    	#'file:/hdfs/store/user/swanson/DYJetsToLL_M-50_TuneZ2Star_8TeV-madgraph-tarball/Zjets_M50_2012-06-02-8TeV-078e4bc/ea74c25a04048a8dd7df6542c03c7a9b/output_145_1_QvD.root'       
+#         'file:/hdfs/store/user/cepeda/SingleElectron/data_SingleElectron_Run2012A_PromptReco_v1_2012-05-29-8TeV-PatTuple-67c1f94/a7f10efca7dd683ad59c7e946715fa59/output_555_1_6eN.root'
+#          'file:/hdfs/store/user/cepeda/SingleElectron/data_SingleElectron_Run2012A_PromptReco_v1_2012-05-29-8TeV-PatTuple-67c1f94/a7f10efca7dd683ad59c7e946715fa59/output_323_1_S80.root'
+#           'file:/hdfs/store/user/cepeda/SingleElectron/data_SingleElectron_Run2012A_PromptReco_v1_2012-05-29-8TeV-PatTuple-67c1f94/a7f10efca7dd683ad59c7e946715fa59/output_180_1_Clc.root'
+#         'file:/hdfs/store/user/cepeda/SingleElectron/data_SingleElectron_Run2012B_PromptReco_v1_a_2012-05-29-8TeV-PatTuple-67c1f94/a7f10efca7dd683ad59c7e946715fa59/output_299_1_mGd.root'
+#          'file:/hdfs/store/user/iross/DoubleElectron/data_DoubleElectron_Run2012A_PromptReco_v1_2012-06-08-8TeV-PatTuple-data-4495432/c7a1c2223886075833473549ad1960ce/output_178_1_WXE.root'
+        ),
+		inputCommands=cms.untracked.vstring(
+						'keep *',
+						'drop *_finalState*_*_*',
+						'drop *_patFinalStateEvent*_*_*'
+		)
+)
+
+process.load("PhysicsTools.PatAlgos.patSequences_cff")
+
+
+from UWAnalysis.Configuration.tools.analysisToolsPT import *
+defaultReconstructionPT(process,'HLT',[
+    'HLT_Ele27_WP80',
+    'HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass50',
+    'HLT_Ele20_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC4_Mass50',
+    'HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_Mass50',
+    'HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL'
+    ])
+
+
+
+#tagAndProbe 
+
+process.load("UWAnalysis.Configuration.zEETagAndProbe_cff")
+
+
+process.tagAndProbe = cms.Path(process.tagAndProbeSequence)
+
+from UWAnalysis.Configuration.tools.ntupleToolsPT import * 
+
+process.probeElectrons = cms.EDProducer("PATElectronEffectiveAreaEmbedder",
+        src = cms.InputTag("triggeredPatElectrons"),
+        target = cms.string("2012Data"),# Available targets: Fal11MC, Summer11MC, 2011Data, 2012Data
+        )
+process.probeLeptons = cms.Path(process.probeElectrons)
+
+# 4l
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'El4lT17',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','SIP','ISO'],
+                              ['(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.5) || (abs(superCluster().eta())<1.479 && abs(superCluster().eta())>0.8 && electronID("mvaNonTrigV0")>0.12) ||  (abs(eta())>1.479 && electronID("mvaNonTrigV0")>0.6)','abs(userFloat("ip3DS"))<4','(chargedHadronIso()+max(0.0,neutralHadronIso()+photonIso()-userFloat("zzRho2012")*userFloat("effArea")))/pt()<0.40'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter'],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoFilter']# 17 GeV leg
+                                
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'El4lT8',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','SIP','ISO'],
+                              ['(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.5) || (abs(superCluster().eta())<1.479 && abs(superCluster().eta())>0.8 && electronID("mvaNonTrigV0")>0.12) ||  (abs(eta())>1.479 && electronID("mvaNonTrigV0")>0.6)','abs(userFloat("ip3DS"))<4','(chargedHadronIso()+max(0.0,neutralHadronIso()+photonIso()-userFloat("zzRho2012")*userFloat("effArea")))/pt()<0.40'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoDoubleFilter']# 8 GeV leg
+                               
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'El4lT8dBetta',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','SIP','ISO'],
+                              ['(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.5) || (abs(superCluster().eta())<1.479 && abs(superCluster().eta())>0.8 && electronID("mvaNonTrigV0")>0.12) ||  (abs(eta())>1.479 && electronID("mvaNonTrigV0")>0.6)','abs(userFloat("ip3DS"))<4','(userIso(0)+max(0.0,userIso(1)+neutralHadronIso()-0.5*userIso(2)))/pt()<0.40'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoDoubleFilter']# 8 GeV leg
+                               
+)
+
+#2l2tau
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'El2l2tauLooseT17',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.5) || (abs(superCluster().eta())<1.479 && abs(superCluster().eta())>0.8 && electronID("mvaNonTrigV0")>0.12) ||  (abs(eta())>1.479 && electronID("mvaNonTrigV0")>0.6)','(chargedHadronIso()+max(0.0,neutralHadronIso()+photonIso()-userFloat("zzRho2012")*userFloat("effArea")))/pt()<0.25'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoFilter']# 17 GeV leg
+
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'El2l2tauTightT17',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.5) || (abs(superCluster().eta())<1.479 && abs(superCluster().eta())>0.8 && electronID("mvaNonTrigV0")>0.12) ||  (abs(eta())>1.479 && electronID("mvaNonTrigV0")>0.6)','(chargedHadronIso()+max(0.0,neutralHadronIso()+photonIso()-userFloat("zzRho2012")*userFloat("effArea")))/pt()<0.10'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoFilter']# 17 GeV leg
+
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'El2l2tauLooseT8',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.5) || (abs(superCluster().eta())<1.479 && abs(superCluster().eta())>0.8 && electronID("mvaNonTrigV0")>0.12) ||  (abs(eta())>1.479 && electronID("mvaNonTrigV0")>0.6)','(chargedHadronIso()+max(0.0,neutralHadronIso()+photonIso()-userFloat("zzRho2012")*userFloat("effArea")))/pt()<0.25'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoDoubleFilter']# 8 GeV leg
+
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'El2l2tauTightT8',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.5) || (abs(superCluster().eta())<1.479 && abs(superCluster().eta())>0.8 && electronID("mvaNonTrigV0")>0.12) ||  (abs(eta())>1.479 && electronID("mvaNonTrigV0")>0.6)','(chargedHadronIso()+max(0.0,neutralHadronIso()+photonIso()-userFloat("zzRho2012")*userFloat("effArea")))/pt()<0.10'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoDoubleFilter']# 8 GeV leg
+
+)
+
+# ZH
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'ElZHLooseT17',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(pt()<20&&(abs(superCluster().eta())<0.800&&electronID("mvaNonTrigV0")>0.925))||(pt()>20&&(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.905))||(pt()<20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.915))||(pt()>20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.955))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.965))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.975))','(userIso(0)+max(0.0,userIso(1)+neutralHadronIso()-0.5*userIso(2)))/pt()<0.25'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoFilter']# 17 GeV leg
+
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'ElZHTightT17',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(pt()<20&&(abs(superCluster().eta())<0.800&&electronID("mvaNonTrigV0")>0.925))||(pt()>20&&(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.905))||(pt()<20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.915))||(pt()>20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.955))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.965))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.975))','(userIso(0)+max(0.0, userIso(1)+neutralHadronIso()-0.5*userIso(2)))/pt()<0.10'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoFilter']# 17 GeV leg
+
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'ElZHLooseT8',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(pt()<20&&(abs(superCluster().eta())<0.800&&electronID("mvaNonTrigV0")>0.925))||(pt()>20&&(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.905))||(pt()<20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.915))||(pt()>20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.955))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.965))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.975))','(userIso(0)+max(0.0,userIso(1)+neutralHadronIso()-0.5*userIso(2)))/pt()<0.25'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoDoubleFilter']# 8 GeV leg
+
+)
+
+addTagAndProbePlotter(process,'ElectronTagAndProbePlotter',
+                              'ElZHTightT8',
+                              'probeElectrons',
+                              'selectedTagAndProbeDiElectrons',
+                              ['ID','ISO'],
+                              ['(pt()<20&&(abs(superCluster().eta())<0.800&&electronID("mvaNonTrigV0")>0.925))||(pt()>20&&(abs(superCluster().eta())<0.8 && electronID("mvaNonTrigV0")>0.905))||(pt()<20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.915))||(pt()>20&&(abs(superCluster().eta())<1.479&&abs(superCluster().eta())>0.8&&electronID("mvaNonTrigV0")>0.955))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.965))||(pt()>20&&(abs(superCluster().eta())>1.479&&electronID("mvaNonTrigV0")>0.975))','(userIso(0)+max(0.0, userIso(1)+neutralHadronIso()-0.5*userIso(2)))/pt()<0.10'],
+                              ['hltEle17CaloIdVTCaloIsoVTTrkIdTTrkIsoVTEle8TrackIsoFilter','hltEle20CaloIdVTCaloIsoVTTrkIdTTrkIsoVTSC4TrackIsoFilter '],
+                              ['hltEle17TightIdLooseIsoEle8TightIdLooseIsoTrackIsoDoubleFilter']# 8 GeV leg
+
+)
+
+
+addEventSummary(process,False,'summary','tagAndProbe')
+
+process.TFileService.fileName=cms.string("outputFileName.root")
+
+
+
+
+
+
+
+
+
+
+

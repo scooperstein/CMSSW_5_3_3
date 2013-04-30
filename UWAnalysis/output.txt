@@ -1,0 +1,396 @@
+Configuration/python/LepTauAnalysis_cff.py:ETanalysisConfigurator.addDiCandidateModule('diElectrons','PATElePairProducer','smearedElectronsET','smearedElectronsET','smearedMETET','smearedJetsET',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/LepTauAnalysis_cff.py:ETanalysisConfigurator.addDiCandidateModule('eleTaus','PATEleTauPairProducer','smearedElectronsET','smearedTausET','smearedMETET','smearedJetsET',1,9999,text = 'AtLeastOneEleTau',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/LepTauAnalysis_cff.py:#ETanalysisConfigurator.addSelector('eleTausWRej','PATEleTauPairSelector','mt1MET<40||pZeta-1.5*pZetaVis>-20','ETWRejection',1)
+Configuration/python/LepTauAnalysis_cff.py:MTanalysisConfigurator.addDiCandidateModule('diMuons','PATMuPairProducer','smearedMuonsMT','smearedMuonsMT','smearedMETMT','smearedJetsMT',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/LepTauAnalysis_cff.py:MTanalysisConfigurator.addDiCandidateModule('diTaus','PATMuTauPairProducer','smearedMuonsMT','smearedTausMT','smearedMETMT','smearedJetsMT',1,9999,text='AtLeastOneDiTau',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/LepTauAnalysis_cff.py:#MTanalysisConfigurator.addSelector('diTausWRej','PATMuTauPairSelector','mt1MET<40||pZeta-1.5*pZetaVis>-20','MTWRejection',1)
+Configuration/python/muJetAnalysis_cff.py:analysisConfigurator.addSmearing('patOverloadedTaus','patMuonsForAnalysis','convRejElectrons','patOverloadedJets','METInputTag')
+Configuration/python/muJetAnalysis_cff.py:analysisConfigurator.addDiCandidateModule('diMuons','PATMuPairProducer', 'smearedMuons','smearedMuons','smearedMET','smearedJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/muJetAnalysis_cff.py:analysisConfigurator.addDiCandidateModule('muJets','PATMuJetPairProducer','smearedMuons','smearedJets','smearedMET','smearedJets',1,9999,text='AtLeastOneDiTau',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/tauFakeRate_muEnriched_cff.py:muEnrichedConfigurator.addDiCandidateModule('diMuonsMuEnrichedFR','PATMuPairProducer', 'patMuonsForAnalysis','patMuonsForAnalysis','patMETs','selectedPatJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/tauFakeRate_muEnriched_cff.py:#Make Muons+MET
+Configuration/python/tauFakeRate_muEnriched_cff.py:muEnrichedConfigurator.addCandidateMETModule('muEnrichedCands','PATMuonNuPairProducer','patMuonsForAnalysis','patMETs','selectedPatJets',0,9999,'')
+Configuration/python/tauFakeRate_wJets_cff.py:wJetsConfigurator.addDiCandidateModule('diMuonswJetsFR','PATMuPairProducer', 'patMuonsForAnalysis','patMuonsForAnalysis','patMETs','selectedPatJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/tauFakeRate_wJets_cff.py:#Make Muons+MET
+Configuration/python/tauFakeRate_wJets_cff.py:wJetsConfigurator.addCandidateMETModule('wJetsCands','PATMuonNuPairProducer','patMuonsForAnalysis','patMETs','selectedPatJets',0,9999,'')
+Configuration/python/tauFakeRate_zJets_cff.py:zJetsConfigurator.addDiCandidateModule('diMuonszJetsFR','PATMuPairProducer', 'patMuonsForAnalysis','patMuonsForAnalysis','patMETs','selectedPatJets',1,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/wMuNuAnalysisPT_cff.py:analysisConfigurator.addDiCandidateModule('diMuons','PATMuPairProducer', 'cleanPatMuons','cleanPatMuons','systematicsMET','cleanPatJets',0,9999,text = '',leadingObjectsOnly = True,dR = 0.15,recoMode = "")
+Configuration/python/wMuNuAnalysisPT_cff.py:#Make Muons+MET
+Configuration/python/wMuNuAnalysisPT_cff.py:analysisConfigurator.addCandidateMETModule('wCands','PATMuonNuPairProducer','cleanPatMuons','systematicsMET','cleanPatJets',1,9999,'AtLeastOneWCandidate',genParticles="genDaughters")
+Configuration/python/wMuNuAnalysisPT_cff.py:#analysisConfigurator.addCandidateMETModule('wGenCands','PATCandNuPairProducer','genMuons','genNeutrinos','cleanPatJets',0,9999,'')
+Configuration/python/wMuNuAnalysis_cff.py:analysisConfigurator.addDiCandidateModule('diMuons','PATMuPairProducer', 'patMuonsForAnalysis','patMuonsForAnalysis','patMETs','selectedPatJets',0,9999,text = '',leadingObjectsOnly = True,dR = 0.15,recoMode = "")
+Configuration/python/wMuNuAnalysis_cff.py:#Make Muons+MET
+Configuration/python/wMuNuAnalysis_cff.py:analysisConfigurator.addCandidateMETModule('wCands','PATMuonNuPairProducer','patMuonsForAnalysis','patMETs','selectedPatJets',1,9999,'AtLeastOneWCandidate')
+Configuration/python/wMuNuAnalysis_cff.py:analysisConfigurator.addCandidateMETModule('wGenCands','PATCandNuPairProducer','genMuons','genNeutrinos','selectedPatJets',0,9999,'')
+Configuration/python/zEETagAndProbe_cff.py:#tagAndProbeConfigurator.addDiCandidateModule('tagAndProbeEleTracks','PATEleTrackPairProducer', 'triggeredPatElectrons','gsfTrackCandidates','systematicsMET','cleanPatJets',0,9999,text = '',leadingObjectsOnly = True,dR = 0.15,recoMode = "")
+Configuration/python/zEETagAndProbe_cff.py:#tagAndProbeConfigurator2.addDiCandidateModule('tagAndProbeEleSCs','PATEleSCPairProducer', 'triggeredPatElectrons','superClusterCands','systematicsMET','cleanPatJets',1,9999,text = '',leadingObjectsOnly = True,dR = 0.5,recoMode = "")
+Configuration/python/zEETagAndProbe_cff.py:#tagAndProbeConfigurator2.addSelector('selectedTagAndProbeEleSCs','PATEleSCPairSelector','calibratedMET.pt()<20 && abs(leg1.eta())<2.5&&abs(leg2.eta())<2.5&&leg1.pt()>20&&leg2.pt()>5&&mass>50&&mass<120&&leg1.userFloat("WWID")>0&&(leg1.chargedHadronIso+leg1.photonIso+leg1.neutralHadronIso())/leg1.pt()<0.1','tagAndProbeEleSCs',0,100)
+Configuration/python/zEETagAndProbe_cff.py:tagAndProbeConfigurator3.addDiCandidateModule('tagAndProbeDiElectrons','PATElePairProducer', 'triggeredPatElectrons','triggeredPatElectrons','systematicsMET','cleanPatJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/zEETagAndProbe_cff.py:# tagAndProbeConfigurator4.addDiCandidateModule('tagAndProbeEleTaus','PATEleTauPairProducer', 'triggeredPatElectrons','triggeredPatTaus','systematicsMET','cleanPatJets',1,9999,text = '',leadingObjectsOnly = True,dR = 0.15,recoMode = "")
+Configuration/python/zEleEleAnalysis_cff.py:zEleEleAnalysisConfigurator.addDiCandidateModule('zEleEleCandidates','PATElePairProducer', 'convRejElectrons','convRejElectrons','patMETs','selectedPatJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/zEleMuAnalysis_cff.py:analysisConfiguratorEMu.addSmearing('patMuVetoTaus','patMuonsForAnalysis','convRejElectrons','patOverloadedJets','METInputTag')
+Configuration/python/zEleMuAnalysis_cff.py:analysisConfiguratorEMu.addDiCandidateModule('diMuons','PATMuPairProducer', 'smearedMuons','smearedMuons','smearedMET','smearedJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/zEleMuAnalysis_cff.py:analysisConfiguratorEMu.addDiCandidateModule('diElectrons','PATElePairProducer', 'smearedElectrons','smearedElectrons','smearedMET','smearedJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/zEleMuAnalysis_cff.py:analysisConfiguratorEMu.addDiCandidateModule('eleMuons','PATEleMuPairProducer', 'smearedElectrons','smearedMuons','smearedMET','smearedJets',1,9999,text = 'AtLeastOneEleMu',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/zEleTauAnalysis_cff.py:analysisConfigurator.addSmearing('patOverloadedTaus','patMuonsForAnalysis','convRejElectrons','patOverloadedJets','METInputTag')
+Configuration/python/zEleTauAnalysis_cff.py:analysisConfigurator.addDiCandidateModule('diElectrons','PATElePairProducer', 'smearedElectrons','smearedElectrons','smearedMET','smearedJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/zEleTauAnalysis_cff.py:analysisConfigurator.addDiCandidateModule('eleTaus','PATEleTauPairProducer', 'smearedElectrons','smearedTaus','smearedMET','smearedJets',1,9999,text = 'AtLeastOneEleTau',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/zMuMuAnalysis_cff.py:zMuMuAnalysisConfigurator.addDiCandidateModule('zMuMuCandidates','PATMuPairProducer', 'patMuonsForAnalysis','patMuonsForAnalysis','patMETs','patOverloadedJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/zMuMuTagAndProbe_cff.py:tagAndProbeConfigurator.addDiCandidateModule('tagAndProbeMuTracks','PATMuPairProducer', 'triggeredPatMuons','triggeredPatMuons','systematicsMET','selectedPatJets',1,9999,text = '',leadingObjectsOnly = True,dR = 0.15,recoMode = "")
+Configuration/python/zMuMuTagAndProbe_cff.py:#tagAndProbeConfigurator.addSelector('selectedTagAndProbeMuTracks','PATMuPairSelector','calibratedMET.pt()<20 && charge==0&&mass>50&&mass<120&&leg1.userFloat("isWWMuon")&&((leg1.chargedHadronIso+leg1.photonIso+leg1.neutralHadronIso)/leg1.pt()<0.2)&&leg1.pt()>25&&leg2.pt()>5&&abs(leg2.eta())<2.4&&abs(leg1.eta())<2.1','tagAndProbePairs',1,100)
+Configuration/python/zMuTauAnalysis_cff.py:analysisConfigurator.addSmearing('patOverloadedTaus','patMuonsForAnalysis','convRejElectrons','patOverloadedJets','METInputTag')
+Configuration/python/zMuTauAnalysis_cff.py:analysisConfigurator.addDiCandidateModule('diMuons','PATMuPairProducer', 'smearedMuons','smearedMuons','smearedMET','smearedJets',0,9999,text = '',leadingObjectsOnly = False,dR = 0.15,recoMode = "")
+Configuration/python/zMuTauAnalysis_cff.py:analysisConfigurator.addDiCandidateModule('diTaus','PATMuTauPairProducer','smearedMuons','smearedTaus','smearedMET','smearedJets',1,9999,text='AtLeastOneDiTau',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zMuTauAnalysis_cff.py:analysisConfigurator.addSelector('diTausWRej','PATMuTauPairSelector','mt1MET<40','WRejection',1)
+Configuration/python/zzLLLLAnalysis_cff.py:MMMTanalysisConfigurator.addSmearing('patOverloadedTaus','patMuonsForAnalysis','convRejElectrons','selectedPatJets','METInputTag')
+Configuration/python/zzLLLLAnalysis_cff.py:MMMTanalysisConfigurator.addDiCandidateModule('MMMTdiMuons','PATMuPairProducer', 'smearedMuons','smearedMuons','smearedMET','smearedJets',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMMTanalysisConfigurator.addDiCandidateModule('MMMTmuTau','PATMuTauPairProducer', 'smearedMuons','smearedTaus','smearedMET','smearedJets',1,9999,text = 'MMMTAtLeastOneMuTau',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMMTanalysisConfigurator.addDiCandidateModule('MMMTzzCands','PATMuMuMuTauQuadProducer','MMMTosDiMuons','MMMTmuTau','smearedMET','smearedJets',1,9999,text='MMMTAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMTTanalysisConfigurator.addDiCandidateModule('MMTTdiMuons','PATMuPairProducer', 'smearedMuonsMMTT','smearedMuonsMMTT','smearedMETMMTT','smearedJetsMMTT',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMTTanalysisConfigurator.addDiCandidateModule('MMTTdiTaus','PATDiTauPairProducer','smearedTausMMTT','smearedTausMMTT','smearedMETMMTT','smearedJetsMMTT',1,9999,text='MMTTAtLeastOneDiTau',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMTTanalysisConfigurator.addDiCandidateModule('MMTTzzCands','PATMuMuTauTauQuadProducer','MMTTosDiMuons','MMTTdiTaus','smearedMETMMTT','smearedJetsMMTT',1,9999,text='MMTTAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:######################__________________________________MMET_____________________________________##############################
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator = CutSequenceProducer(initialCounter  = 'initialEventsMMET',
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSmearing('patOverloadedTaus','patMuonsForAnalysis','convRejElectrons','selectedPatJets','MMET')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addDiCandidateModule('MMETdiMuons','PATMuPairProducer', 'smearedMuonsMMET','smearedMuonsMMET','smearedMETMMET','smearedJetsMMET',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETosDiMuons','PATMuPairSelector','charge==0&&leg1.isGlobalMuon()&&leg2.isGlobalMuon()&& mass>40 && abs(leg1.eta())<2.4 && abs(leg2.eta())<2.4','MMET DiMuonCreation',1)
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addDiCandidateModule('MMETelecTau','PATEleTauPairProducer','smearedElectronsMMET','smearedTausMMET','smearedMETMMET','smearedJetsMMET',1,9999,text='MMETAtLeastOneDiTau',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addDiCandidateModule('MMETzzCands','PATMuMuEleTauQuadProducer','MMETosDiMuons','MMETelecTau','smearedMETMMET','smearedJetsMMET',1,9999,text='MMETAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addCrossCleanerModule('MMETzzCleanedCands2','PATMuMuEleTauQuadCrossCleaner',1,9999,text='MMETAtLeastOneZZCleanedCandidate',dR = 0.1)
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedMuID','PATMuMuEleTauQuadSelector','leg1.leg1.isGlobalMuon()&&leg1.leg1.isTrackerMuon()&&leg1.leg2.isTrackerMuon()&&leg1.leg2.isTrackerMuon()','MMETLeadingZMuID')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedMuIso','PATMuMuEleTauQuadSelector','((leg1.leg1.pt()>20&&(leg1.leg1.chargedHadronIso()+max(leg1.leg1.photonIso()+leg1.leg1.neutralHadronIso()-0.5*leg1.leg1.userIso(0),0.0))/leg1.leg1.pt()<0.35)||(leg1.leg1.pt()<20&&(leg1.leg1.chargedHadronIso()+max(leg1.leg1.photonIso()+leg1.leg1.neutralHadronIso()-0.5*leg1.leg1.userIso(0),0.0))<7))&&((leg1.leg2.pt()>20&&(leg1.leg2.chargedHadronIso()+max(leg1.leg2.photonIso()+leg1.leg2.neutralHadronIso()-0.5*leg1.leg2.userIso(0),0.0))/leg1.leg2.pt()<0.35)||(leg1.leg2.pt()<20&&(leg1.leg2.chargedHadronIso()+max(leg1.leg2.photonIso()+leg1.leg2.neutralHadronIso()-0.5*leg1.leg2.userIso(0),0.0))<7))','MMETLeadingZMuIso')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedEleID','PATMuMuEleTauQuadSelector','(leg2.leg1.electronID("cicLoose")==1||leg2.leg1.electronID("cicLoose")==3||leg2.leg1.electronID("cicLoose")==5||leg2.leg1.electronID("cicLoose")==7||leg2.leg1.electronID("cicLoose")==9||leg2.leg1.electronID("cicLoose")==11||leg2.leg1.electronID("cicLoose")==13||leg2.leg1.electronID("cicLoose")==15)','MMETEleCiCLoose')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzTauID','PATMuMuEleTauQuadSelector','leg2.leg2.tauID("decayModeFinding")','MMETDecayModeFinding')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedEleIso','PATMuMuEleTauQuadSelector','((leg2.leg1.pt()>20&&(leg2.leg1.chargedHadronIso()+max(leg2.leg1.photonIso()+leg2.leg1.neutralHadronIso()-0.5*leg2.leg1.userIso(0),0.0))/leg2.leg1.pt()<0.35)||(leg2.leg1.pt()<20&&(leg2.leg1.chargedHadronIso()+max(leg2.leg1.photonIso()+leg2.leg1.neutralHadronIso()-0.5*leg2.leg1.userIso(0),0.0))<7))','MMETLooseEleIso')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedCandsTauIso','PATMuMuEleTauQuadSelector','(leg2.leg2.isolationPFChargedHadrCandsPtSum())<4.0','MMETTauIsolation')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSorter('MMETzzCleanedCandsSortedByZMass','PATMuMuEleTauQuadSorterByZMass')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedCandsAboveThreshold','PATMuMuEleTauQuadSelector','leg1().leg1().pt()>20 && leg1().leg2().pt()>15 && leg2().leg1().pt()>10 &&leg2().leg2().pt()>20 && abs(leg2.leg1.eta())<2.5 && abs(leg2.leg2.eta())<2.3','MMETAtLeastOneZZCandOverThresholds')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedCandsMuRej','PATMuMuEleTauQuadSelector','leg2.leg2.tauID("againstMuonLoose")','MMETTauMuRejection')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedCandsEleRej','PATMuMuEleTauQuadSelector','leg2.leg2.tauID("againstElectronLoose")','MMETTauEleRejection')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedCandsHt','PATMuMuEleTauQuadSelector','leg2.leg2.pt()+leg2.leg1.pt()>30','MMETHt')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedCandsETauQ','PATMuMuEleTauQuadSelector','leg2.charge()==0','MMETEleTauCharge')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETanalysisConfigurator.addSelector('MMETzzCleanedCandsETMass','PATMuMuEleTauQuadSelector','leg2.mass()>30&&leg2.mass()<80','MMETETMass')
+Configuration/python/zzLLLLAnalysis_cff.py:MMETselectionSequence =MMETanalysisConfigurator.returnSequence()
+Configuration/python/zzLLLLAnalysis_cff.py:MMEManalysisConfigurator.addDiCandidateModule('MMEMdiMuons','PATMuPairProducer', 'smearedMuonsMMEM','smearedMuonsMMEM','smearedMETMMEM','smearedJetsMMEM',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMEManalysisConfigurator.addDiCandidateModule('MMEMelecMu','PATEleMuPairProducer','smearedElectronsMMEM','smearedMuonsMMEM','smearedMETMMEM','smearedJetsMMEM',1,9999,text='MMEMAtLeastOneDiTau',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMEManalysisConfigurator.addDiCandidateModule('MMEMzzCands','PATMuMuEleMuQuadProducer','MMEMosDiMuons','MMEMelecMu','smearedMETMMEM','smearedJetsMMEM',1,9999,text='MMEMAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMEEanalysisConfigurator.addDiCandidateModule('MMEEdiMuons','PATMuPairProducer', 'smearedMuonsMMEE','smearedMuonsMMEE','smearedMETMMEE','smearedJetsMMEE',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMEEanalysisConfigurator.addDiCandidateModule('MMEEeleEle','PATElePairProducer','smearedElectronsMMEE','smearedElectronsMMEE','smearedMETMMEE','smearedJetsMMEE',1,9999,text='MMEEAtLeastOneEleEle',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMEEanalysisConfigurator.addDiCandidateModule('MMEEzzCands','PATMuMuEleEleQuadProducer','MMEEosDiMuons','MMEEeleEle','smearedMETMMEE','smearedJetsMMEE',1,9999,text='MMEEAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMMManalysisConfigurator.addDiCandidateModule('MMMMdiMuons','PATMuPairProducer', 'smearedMuonsMMMM','smearedMuonsMMMM','smearedMETMMMM','smearedJetsMMMM',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:MMMManalysisConfigurator.addDiCandidateModule('MMMMzzCands','PATMuMuMuMuQuadProducer','MMMMosDiMuons','MMMMdiMuons','smearedMETMMMM','smearedJetsMMMM',1,9999,text='MMMMAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEMTanalysisConfigurator.addDiCandidateModule('EEMTdiElectrons','PATElePairProducer', 'smearedElectronsEEMT','smearedElectronsEEMT','smearedMETEEMT','smearedJetsEEMT',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEMTanalysisConfigurator.addDiCandidateModule('EEMTmuTau','PATMuTauPairProducer', 'smearedMuonsEEMT','smearedTausEEMT','smearedMETEEMT','smearedJetsEEMT',1,9999,text = 'EEMTAtLeastOneMuTau',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEMTanalysisConfigurator.addDiCandidateModule('EEMTzzCands','PATEleEleMuTauQuadProducer','EEMTosDiElectrons','EEMTmuTau','smearedMETEEMT','smearedJetsEEMT',1,9999,text='EEMTAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEETanalysisConfigurator.addDiCandidateModule('EEETdiElectrons','PATElePairProducer', 'smearedElectronsEEET','smearedElectronsEEET','smearedMETEEET','smearedJetsEEET',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEETanalysisConfigurator.addDiCandidateModule('EEETeleTau','PATEleTauPairProducer', 'smearedElectronsEEET','smearedTausEEET','smearedMETEEET','smearedJetsEEET',1,9999,text = 'EEETAtLeastOneMuTau',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEETanalysisConfigurator.addDiCandidateModule('EEETzzCands','PATEleEleEleTauQuadProducer','EEETosDiElectrons','EEETeleTau','smearedMETEEET','smearedJetsEEET',1,9999,text='EEETAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EETTanalysisConfigurator.addDiCandidateModule('EETTdiElectrons','PATElePairProducer', 'smearedElectronsEETT','smearedElectronsEETT','smearedMETEETT','smearedJetsEETT',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EETTanalysisConfigurator.addDiCandidateModule('EETTtauTau','PATDiTauPairProducer', 'smearedTausEETT','smearedTausEETT','smearedMETEETT','smearedJetsEEET',1,9999,text = 'EETTAtLeastOnediTau',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EETTanalysisConfigurator.addDiCandidateModule('EETTzzCands','PATEleEleTauTauQuadProducer','EETTosDiElectrons','EETTtauTau','smearedMETEETT','smearedJetsEEET',1,9999,text='EETTAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEEManalysisConfigurator.addDiCandidateModule('EEEMdiElectrons','PATElePairProducer', 'smearedElectronsEEEM','smearedElectronsEEEM','smearedMETEEEM','smearedJetsEEEM',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEEManalysisConfigurator.addDiCandidateModule('EEEMeleMu','PATEleMuPairProducer', 'smearedElectronsEEEM','smearedMuonsEEEM','smearedMETEEEM','smearedJetsEEEM',1,9999,text = 'EEEMAtLeastOneMuTau',leadingObjectsOnly = False,dR = 0.5,recoMode = "",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEEManalysisConfigurator.addDiCandidateModule('EEEMzzCands','PATEleEleEleMuQuadProducer','EEEMosDiElectrons','EEEMeleMu','smearedMETEEEM','smearedJetsEEEM',1,9999,text='EEEMAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEEEanalysisConfigurator.addDiCandidateModule('EEEEdiElectrons','PATElePairProducer', 'smearedElectronsEEEE','smearedElectronsEEEE','smearedMETEEEE','smearedJetsEEEE',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEEEanalysisConfigurator.addDiCandidateModule('EEEEzzCands','PATEleEleEleEleQuadProducer','EEEEosDiElectrons','EEEEdiElectrons','smearedMETEEEE','smearedJetsEEEE',1,9999,text='EEEEAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEMManalysisConfigurator.addDiCandidateModule('EEMMdiElectrons','PATElePairProducer', 'smearedElectronsEEMM','smearedElectronsEEMM','smearedMETEEMM','smearedJetsEEMM',1,genParticles='genDaughters')
+Configuration/python/zzLLLLAnalysis_cff.py:EEMManalysisConfigurator.addDiCandidateModule('EEMMdiMuons','PATMuPairProducer', 'smearedMuonsEEMM','smearedMuonsEEMM','smearedMETEEMM','smearedJetsEEMM',1)
+Configuration/python/zzLLLLAnalysis_cff.py:EEMManalysisConfigurator.addDiCandidateModule('EEMMzzCands','PATEleEleMuMuQuadProducer','EEMMosDiElectrons','EEMMdiMuons','smearedMETEEMM','smearedJetsEEMM',1,9999,text='EEMMAtLeastOneZZ',leadingObjectsOnly = False,dR = 0.5,recoMode ="",genParticles='genDaughters')
+Configuration/python/tools/CutSequenceProducer.py:               dicand.srcMET = cms.InputTag(met)
+Configuration/python/tools/CutSequenceProducer.py:               dicand.resultLabel = cms.string("PsMETLogM_" + algo)
+Configuration/python/tools/CutSequenceProducer.py:    def addCandidateMETModule(self,moduleName,moduleType, srcLeptons,srcMET,srcJets,min = 1,max=9999,text = ''):
+Configuration/python/tools/CutSequenceProducer.py:               dicand.srcMET = cms.InputTag(srcMET)
+Configuration/python/tools/CutSequenceProducer.py:          #add a post MET tau
+Configuration/python/tools/CutSequenceProducer.py:          smearedMET = cms.EDProducer('METRecalculator',
+Configuration/python/tools/CutSequenceProducer.py:          setattr(pyModule,'smearedMET'+mpost,smearedMET)
+Configuration/python/tools/CutSequenceProducer.py:          self.sequence*=smearedMET
+Configuration/python/tools/analysisTools.py:  #Add PF MET
+Configuration/python/tools/analysisTools.py:  addPfMET(process,'')
+Configuration/python/tools/analysisTools.py:def defaultReconstructionMC(process,triggerProcess = 'HLT',triggerPaths = ['HLT_Mu9'],calibrateMET = False,calibrationScheme = "BothLegs"):
+Configuration/python/tools/analysisTools.py:  #Add PF MET
+Configuration/python/tools/analysisTools.py:  addPfMET(process,'')
+Configuration/python/tools/analysisTools.py:      if mod.label().find('smearedMET') !=-1 :
+Configuration/python/tools/analysisToolsPT.py:  #Build MVA MET
+Configuration/python/tools/analysisToolsPT.py:  process.load("RecoMET.METProducers.mvaPFMET_cff")
+Configuration/python/tools/analysisToolsPT.py:  process.patMVAMetMuTau = process.patMETs.clone(
+Configuration/python/tools/analysisToolsPT.py:  	addGenMET = cms.bool(False)
+Configuration/python/tools/analysisToolsPT.py:  process.patMVAMetEleTau = process.patMETs.clone(
+Configuration/python/tools/analysisToolsPT.py:  	addGenMET = cms.bool(False)
+Configuration/python/tools/analysisToolsPT.py:      if mod.label().find('smearedMET') !=-1 :
+Configuration/python/tools/analysisToolsPT.py:    process.pfMETSig = cms.EDProducer(
+Configuration/python/tools/analysisToolsPT.py:         "UnembedPFMETSignificance",
+Configuration/python/tools/analysisToolsPT.py:    # Get PFMET w/ singificance
+Configuration/python/tools/analysisToolsPT.py:    process.load("TauAnalysis.CandidateTools.PFMETSignCovMatrixEmbedder_cfi")
+Configuration/python/tools/analysisToolsPT.py:    process.metWithSig = process.patMETSignEmbedder.clone(
+Configuration/python/tools/analysisToolsPT.py:        src = cms.InputTag("systematicsMET"),
+Configuration/python/tools/analysisToolsPT.py:        srcCov = cms.InputTag("pfMETSig")
+Configuration/python/tools/analysisToolsPT.py:        process.pfMETSig *
+Configuration/python/tools/ntupleTools.py:                              muNuCalMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleTools.py:                              muNuMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                    tag        = cms.string("MET"),
+Configuration/python/tools/ntupleTools.py:                              muNuCorMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                    tag        = cms.string("corMET"),
+Configuration/python/tools/ntupleTools.py:#Ntuple for Mu+Tau+MET  final states
+Configuration/python/tools/ntupleTools.py:                              projMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                    tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleTools.py:                                    method     = cms.string("projMET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt12MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt2MET"),
+Configuration/python/tools/ntupleTools.py:                              muTauMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleTools.py:                              muTauDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                              muTauDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt12MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt2MET"),
+Configuration/python/tools/ntupleTools.py:                              muJetMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleTools.py:                              muJetGenMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  pluginType = cms.string("PATGenMETFiller"),
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("genMET"),
+Configuration/python/tools/ntupleTools.py:                              muJetDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                              muJetDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                              projMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                    tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleTools.py:                                    method     = cms.string("projMET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt12MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt2MET"),
+Configuration/python/tools/ntupleTools.py:                              ditauMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleTools.py:                              ditauGenMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  pluginType = cms.string("PATGenMETFiller"),
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("genMET"),
+Configuration/python/tools/ntupleTools.py:                              ditauDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                              ditauDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:#Tree for Mu+Mu + MET final state
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt12MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt2MET"),
+Configuration/python/tools/ntupleTools.py:                              mumuMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                              mumuDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                              mumuDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:##Tree for e+mu +MET final state
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt12MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt2MET"),
+Configuration/python/tools/ntupleTools.py:                              eleMuMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                              eleMuPMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("projMET"),
+Configuration/python/tools/ntupleTools.py:                              eleMuDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                              eleMuDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:#Tree for e+tau + MET final state
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method =cms.string("mt2MET"),
+Configuration/python/tools/ntupleTools.py:                              eleTauMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                              eleTauDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag =cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                                  method =cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleTools.py:                              eleTauDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                                  method = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleTools.py:                              eleTauProjMET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:                                  tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleTools.py:                                  method     = cms.string('projMET'),
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleTools.py:		MET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                              projMET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                    tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                    method     = cms.string("projMET"),
+Configuration/python/tools/ntupleToolsLTau.py:                              METPhi = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string("mt12MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string("mt2MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                              muTauMET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleToolsLTau.py:                              muTauDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  tag        = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                              muTauDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  tag        = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsLTau.py:#Tree for e+tau + MET final state
+Configuration/python/tools/ntupleToolsLTau.py:                              EleTauMETPhi = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method =cms.string("mt2MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                              eleTauMET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                              eleTauDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  tag =cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method =cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                              eleTauDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  tag = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsLTau.py:                              eleTauProjMET = cms.PSet(
+Configuration/python/tools/ntupleToolsLTau.py:                                  tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleToolsLTau.py:                                  method     = cms.string('projMET'),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCalMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                   method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("MET"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCorMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("corMET"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCalMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                   method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("MET"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCorMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("corMET"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCalMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                   method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("MET"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCorMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("corMET"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCalMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                   method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("MET"),
+Configuration/python/tools/ntupleToolsPT.py:                               muNuCorMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                     tag        = cms.string("corMET"),
+Configuration/python/tools/ntupleToolsPT.py:                              projMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                    tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleToolsPT.py:                                    method     = cms.string("projMET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string("mt12MET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string("mt2MET"),
+Configuration/python/tools/ntupleToolsPT.py:                              muTauMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string("calibratedMET.pt()"),
+Configuration/python/tools/ntupleToolsPT.py:                              muTauDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                  tag        = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsPT.py:                              muTauDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                  tag        = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsPT.py:#Tree for e+tau + MET final state
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string("mt1MET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method =cms.string("mt2MET"),
+Configuration/python/tools/ntupleToolsPT.py:                              eleTauMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                              eleTauDPhi1MET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                  tag =cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method =cms.string("dPhi1MET"),
+Configuration/python/tools/ntupleToolsPT.py:                              eleTauDPhi2MET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                  tag = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method = cms.string("dPhi2MET"),
+Configuration/python/tools/ntupleToolsPT.py:                              eleTauProjMET = cms.PSet(
+Configuration/python/tools/ntupleToolsPT.py:                                  tag        = cms.string("projMET"),
+Configuration/python/tools/ntupleToolsPT.py:                                  method     = cms.string('projMET'),
+Configuration/python/tools/zzNtupleTools.py:				method     = cms.string("mt12MET"),
+Configuration/python/tools/zzNtupleTools.py:				method     = cms.string("mt1MET"),
+Configuration/python/tools/zzNtupleTools.py:				method     = cms.string("leg1.mt12MET"),
+Configuration/python/tools/zzNtupleTools.py:				method     = cms.string("leg1.mt1MET"),
+Configuration/python/tools/zzNtupleTools.py:					method     = cms.string("leg1.mt2MET"),
+Configuration/python/tools/zzNtupleTools.py:					method     = cms.string("mt2MET"),
+Configuration/python/tools/zzNtupleTools.py:					method     = cms.string("leg2.mt12MET"),
+Configuration/python/tools/zzNtupleTools.py:					method     = cms.string("leg2.mt1MET"),
+Configuration/python/tools/zzNtupleTools.py:					method     = cms.string("leg2.mt2MET"),
+Binary file Configuration/python/tools/CutSequenceProducer.pyc matches
+Binary file Configuration/python/tools/analysisTools.pyc matches
+Binary file Configuration/python/tools/analysisToolsPT.pyc matches
+Binary file Configuration/python/tools/ntupleTools.pyc matches
+Binary file Configuration/python/tools/ntupleToolsLTau.pyc matches
+Binary file Configuration/python/tools/ntupleToolsPT.pyc matches
+Binary file Configuration/python/tools/zzNtupleTools.pyc matches
+Configuration/python/tools/reserve:  #Build MVA MET
+Configuration/python/tools/reserve:  process.load("RecoMET.METProducers.mvaPFMET_cff")
+Configuration/python/tools/reserve:  process.patMVAMetMuTau = process.patMETs.clone(
+Configuration/python/tools/reserve:  	addGenMET = cms.bool(False)
+Configuration/python/tools/reserve:  process.patMVAMetEleTau = process.patMETs.clone(
+Configuration/python/tools/reserve:  	addGenMET = cms.bool(False)
+Configuration/python/tools/reserve:      if mod.label().find('smearedMET') !=-1 :
+Configuration/python/tools/reserve:    process.pfMETSig = cms.EDProducer(
+Configuration/python/tools/reserve:         "UnembedPFMETSignificance",
+Configuration/python/tools/reserve:    # Get PFMET w/ singificance
+Configuration/python/tools/reserve:    process.load("TauAnalysis.CandidateTools.PFMETSignCovMatrixEmbedder_cfi")
+Configuration/python/tools/reserve:    process.metWithSig = process.patMETSignEmbedder.clone(
+Configuration/python/tools/reserve:        src = cms.InputTag("systematicsMET"),
+Configuration/python/tools/reserve:        srcCov = cms.InputTag("pfMETSig")
+Configuration/python/tools/reserve:        process.pfMETSig *
+Configuration/python/tools/.#analysisToolsPT.py.1.12:  #Build MVA MET
+Configuration/python/tools/.#analysisToolsPT.py.1.12:  process.load("RecoMET.METProducers.mvaPFMET_cff")
+Configuration/python/tools/.#analysisToolsPT.py.1.12:  process.patMVAMetMuTau = process.patMETs.clone(
+Configuration/python/tools/.#analysisToolsPT.py.1.12:  	addGenMET = cms.bool(False)
+Configuration/python/tools/.#analysisToolsPT.py.1.12:  process.patMVAMetEleTau = process.patMETs.clone(
+Configuration/python/tools/.#analysisToolsPT.py.1.12:  	addGenMET = cms.bool(False)
+Configuration/python/tools/.#analysisToolsPT.py.1.12:      if mod.label().find('smearedMET') !=-1 :
+Configuration/python/tools/.#analysisToolsPT.py.1.12:    process.pfMETSig = cms.EDProducer(
+Configuration/python/tools/.#analysisToolsPT.py.1.12:         "UnembedPFMETSignificance",
+Configuration/python/tools/.#analysisToolsPT.py.1.12:    # Get PFMET w/ singificance
+Configuration/python/tools/.#analysisToolsPT.py.1.12:    process.load("TauAnalysis.CandidateTools.PFMETSignCovMatrixEmbedder_cfi")
+Configuration/python/tools/.#analysisToolsPT.py.1.12:    process.metWithSig = process.patMETSignEmbedder.clone(
+Configuration/python/tools/.#analysisToolsPT.py.1.12:        src = cms.InputTag("systematicsMET"),
+Configuration/python/tools/.#analysisToolsPT.py.1.12:        srcCov = cms.InputTag("pfMETSig")
+Configuration/python/tools/.#analysisToolsPT.py.1.12:        process.pfMETSig *
+Binary file Configuration/python/LepTauAnalysis_cff.pyc matches
+Binary file Configuration/python/muJetAnalysis_cff.pyc matches
+Binary file Configuration/python/tauFakeRate_muEnriched_cff.pyc matches
+Binary file Configuration/python/tauFakeRate_wJets_cff.pyc matches
+Binary file Configuration/python/tauFakeRate_zJets_cff.pyc matches
+Binary file Configuration/python/wMuNuAnalysisPT_cff.pyc matches
+Binary file Configuration/python/wMuNuAnalysis_cff.pyc matches
+Binary file Configuration/python/zEETagAndProbe_cff.pyc matches
+Binary file Configuration/python/zEleEleAnalysis_cff.pyc matches
+Binary file Configuration/python/zEleMuAnalysis_cff.pyc matches
+Binary file Configuration/python/zEleTauAnalysis_cff.pyc matches
+Binary file Configuration/python/zMuMuAnalysis_cff.pyc matches
+Binary file Configuration/python/zMuMuTagAndProbe_cff.pyc matches
+Binary file Configuration/python/zMuTauAnalysis_cff.pyc matches
+Binary file Configuration/python/zzLLLLAnalysis_cff.pyc matches
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='ZTT.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='ZTT_dPhi1MET'     outputFile='muTauMVA.root'  min=0.0 max=3.14  variable='dPhi1MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='ZTT.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='ZTT_dPhi2MET'     outputFile='muTauMVA.root'  min=0 max=3.14   variable='dPhi2MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='QCD.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='QCD_dPhi1MET'     outputFile='muTauMVA.root'  min=0.0 max=3.14  variable='dPhi1MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='QCD.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='QCD_dPhi2MET'     outputFile='muTauMVA.root'  min=0 max=3.14   variable='dPhi2MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='W.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='W_dPhi1MET'     outputFile='muTauMVA.root'  min=0.0 max=3.14  variable='dPhi1MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='W.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='W_dPhi2MET'     outputFile='muTauMVA.root'  min=0 max=3.14   variable='dPhi2MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='ZMM.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='Z_dPhi1MET'     outputFile='muTauMVA.root'  min=0.0 max=3.14  variable='dPhi1MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='ZMM.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='Z_dPhi2MET'     outputFile='muTauMVA.root'  min=0 max=3.14   variable='dPhi2MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='TOPVV.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='TOPVV_dPhi1MET'     outputFile='muTauMVA.root'  min=0.0 max=3.14  variable='dPhi1MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='TOPVV.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='TOPVV_dPhi2MET'     outputFile='muTauMVA.root'  min=0 max=3.14   variable='dPhi2MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='ggH'$higgsMass'.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='GGH'$higgsMass'_dPhi1MET'     outputFile='muTauMVA.root'  min=0.0 max=3.14  variable='dPhi1MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='ggH'$higgsMass'.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='GGH'$higgsMass'_dPhi2MET'     outputFile='muTauMVA.root'  min=0 max=3.14   variable='dPhi2MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='bbA'$higgsMass'.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='BBH'$higgsMass'_dPhi1MET'     outputFile='muTauMVA.root'  min=0.0 max=3.14  variable='dPhi1MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/scripts/trainLikelihoodMuTau:MakeKeysPDF inputFile='bbA'$higgsMass'.root'  inputTrees='muTauEventTree/eventTree'   cut=$CUT     pdfNames='BBH'$higgsMass'_dPhi2MET'     outputFile='muTauMVA.root'  min=0 max=3.14   variable='dPhi2MET'  rho=2.0    weight='__WEIGHT__'  normnames=''
+Configuration/test/EMBEDDING.py:process.reMET = cms.EDProducer('METRecalculator',
+Configuration/test/ZMT-FULL-ACC.py:#                    doType1MET       = False,
+Configuration/test/ZMT-FULL-E.py:#MET corrections
+Configuration/test/ZMT-FULL-E.py:process.patMETs.metSource = cms.InputTag("pfMet","","RECO")
+Configuration/test/ZMT-FULL-E.py:process.reMET = cms.EDProducer("METRecalculator",
+Configuration/test/ZMT-FULL-E.py:                               met =cms.InputTag("patMETs"),
+Configuration/test/ZMT-FULL-E.py:#Change the di candidates to the new MET
+Configuration/test/ZMT-FULL-E.py:process.diTaus.srcMET = cms.InputTag("reMET")
+Configuration/test/ZMT-FULL-E.py:                            srcMET = cms.InputTag('patMETs'),
+Configuration/test/ZMT-FULL-E.py:    process.reMET*
+Configuration/test/ZMT-FULL.py:#                    doType1MET       = False,

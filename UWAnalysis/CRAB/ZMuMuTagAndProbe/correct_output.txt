@@ -1,0 +1,1272 @@
+List Of Filters
+['initialTagAndProbeEvents', 'tagAndProbePairs']
+18-Feb-2013 18:16:54 CST  Initiating request to open file root://cmsxrootd.hep.wisc.edu//store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleMu_Run2012C_PromptReco_v2_Run198934_201264/patTuple_cfg-80548ADB-9EDE-E111-B86A-0019B9F70468.root
+130218 18:16:55 13350 Xrd: GoToAnotherServer: Going to: g10n19.hep.wisc.edu:31094
+18-Feb-2013 18:20:20 CST  Successfully opened file root://cmsxrootd.hep.wisc.edu//store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleMu_Run2012C_PromptReco_v2_Run198934_201264/patTuple_cfg-80548ADB-9EDE-E111-B86A-0019B9F70468.root
+--- Reader                   : Booking "BDTG" of type "BDT" from /afs/hep.wisc.edu/user/stephane/CMSSW_5_3_3/src/UserCode/MitHtt/data/VBFMVA/MuTau/VBFMVA_BDTG.weights.xml.
+--- MethodBase               : Reading weight file: /afs/hep.wisc.edu/user/stephane/CMSSW_5_3_3/src/UserCode/MitHtt/data/VBFMVA/MuTau/VBFMVA_BDTG.weights.xml
+--- BDTG                     : Read method "BDTG" of type "BDT"
+--- BDTG                     : MVA method was trained with TMVA Version: 4.1.2
+--- BDTG                     : MVA method was trained with ROOT Version: 5.32/00
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- Reader                   : Booked classifier "BDTG" of type: "BDT"
+Begin processing the 1st record. Run 200091, Event 27811677, LumiSection 78 at 18-Feb-2013 18:22:47.948 CST
+--- Reader                   : Booking "JetID" of type "Category" from /afs/hep.wisc.edu/user/stephane/CMSSW_5_3_3/src/CMGTools/External/data/mva_JetID_v1.weights.xml.
+--- MethodBase               : Reading weight file: /afs/hep.wisc.edu/user/stephane/CMSSW_5_3_3/src/CMGTools/External/data/mva_JetID_v1.weights.xml
+--- JetID_def44              : Read method "JetID_def44" of type "Category"
+--- JetID_def44              : MVA method was trained with TMVA Version: 4.0.7
+--- JetID_def44              : MVA method was trained with ROOT Version: 5.27/06
+--- JetID_def44              : Recreating sub-classifiers from XML-file 
+--- HighPt                   : Read method "HighPt" of type "BDT"
+--- HighPt                   : MVA method was trained with TMVA Version: 4.0.7
+--- HighPt                   : MVA method was trained with ROOT Version: 5.27/06
+--- LowPt                    : Read method "LowPt" of type "BDT"
+--- LowPt                    : MVA method was trained with TMVA Version: 4.0.7
+--- LowPt                    : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "JetID_def44" of type: "Category"
+Reader booked
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+WARNING : did not find any valid track reference attached to the jet 
+--- Reader                   : Booking "JetID" of type "Category" from /afs/hep.wisc.edu/user/stephane/CMSSW_5_3_3/src/CMGTools/External/data/mva_JetID_v1.weights.xml.
+--- MethodBase               : Reading weight file: /afs/hep.wisc.edu/user/stephane/CMSSW_5_3_3/src/CMGTools/External/data/mva_JetID_v1.weights.xml
+--- JetID_def44              : Read method "JetID_def44" of type "Category"
+--- JetID_def44              : MVA method was trained with TMVA Version: 4.0.7
+--- JetID_def44              : MVA method was trained with ROOT Version: 5.27/06
+--- JetID_def44              : Recreating sub-classifiers from XML-file 
+--- HighPt                   : Read method "HighPt" of type "BDT"
+--- HighPt                   : MVA method was trained with TMVA Version: 4.0.7
+--- HighPt                   : MVA method was trained with ROOT Version: 5.27/06
+--- LowPt                    : Read method "LowPt" of type "BDT"
+--- LowPt                    : MVA method was trained with TMVA Version: 4.0.7
+--- LowPt                    : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "JetID_def44" of type: "Category"
+Reader booked
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 2nd record. Run 200091, Event 27832837, LumiSection 78 at 18-Feb-2013 18:22:50.069 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 3rd record. Run 200091, Event 27823709, LumiSection 78 at 18-Feb-2013 18:22:50.134 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 4th record. Run 200091, Event 27809965, LumiSection 78 at 18-Feb-2013 18:22:50.233 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 5th record. Run 200091, Event 27927589, LumiSection 78 at 18-Feb-2013 18:22:50.331 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 6th record. Run 200091, Event 27875189, LumiSection 78 at 18-Feb-2013 18:22:50.416 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 7th record. Run 200091, Event 27872669, LumiSection 78 at 18-Feb-2013 18:22:50.491 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 8th record. Run 200091, Event 27916869, LumiSection 78 at 18-Feb-2013 18:22:50.568 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 9th record. Run 200091, Event 27928965, LumiSection 78 at 18-Feb-2013 18:22:50.656 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 10th record. Run 200091, Event 27982861, LumiSection 78 at 18-Feb-2013 18:22:50.739 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 11th record. Run 200091, Event 27933565, LumiSection 78 at 18-Feb-2013 18:22:50.798 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 12th record. Run 200091, Event 28017901, LumiSection 78 at 18-Feb-2013 18:22:50.872 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 13th record. Run 200091, Event 28028957, LumiSection 78 at 18-Feb-2013 18:22:50.945 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 14th record. Run 200091, Event 27977733, LumiSection 78 at 18-Feb-2013 18:22:50.991 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 15th record. Run 200091, Event 28059501, LumiSection 78 at 18-Feb-2013 18:22:51.073 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 16th record. Run 200091, Event 28079589, LumiSection 78 at 18-Feb-2013 18:22:51.153 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 17th record. Run 200091, Event 27982957, LumiSection 78 at 18-Feb-2013 18:22:51.245 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 18th record. Run 200091, Event 27995997, LumiSection 78 at 18-Feb-2013 18:22:51.329 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 19th record. Run 200091, Event 28178973, LumiSection 78 at 18-Feb-2013 18:22:51.428 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 20th record. Run 200091, Event 28044893, LumiSection 78 at 18-Feb-2013 18:22:51.535 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 21st record. Run 200091, Event 28052581, LumiSection 78 at 18-Feb-2013 18:22:51.635 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 22nd record. Run 200091, Event 28150189, LumiSection 78 at 18-Feb-2013 18:22:52.015 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 23rd record. Run 200091, Event 28248157, LumiSection 78 at 18-Feb-2013 18:22:52.164 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 24th record. Run 200091, Event 28206421, LumiSection 78 at 18-Feb-2013 18:22:52.230 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 25th record. Run 200091, Event 28234869, LumiSection 78 at 18-Feb-2013 18:22:52.334 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 26th record. Run 200091, Event 28236365, LumiSection 78 at 18-Feb-2013 18:22:52.400 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 27th record. Run 200091, Event 28259333, LumiSection 78 at 18-Feb-2013 18:22:52.478 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 28th record. Run 200091, Event 28316629, LumiSection 78 at 18-Feb-2013 18:22:52.544 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 29th record. Run 200091, Event 28149877, LumiSection 78 at 18-Feb-2013 18:22:52.610 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 30th record. Run 200091, Event 28200893, LumiSection 78 at 18-Feb-2013 18:22:52.691 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 31st record. Run 200091, Event 28371029, LumiSection 78 at 18-Feb-2013 18:22:52.801 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 32nd record. Run 200091, Event 28436885, LumiSection 78 at 18-Feb-2013 18:22:52.877 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 33rd record. Run 200091, Event 28268637, LumiSection 78 at 18-Feb-2013 18:22:52.925 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 34th record. Run 200091, Event 28426693, LumiSection 78 at 18-Feb-2013 18:22:53.016 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 35th record. Run 200091, Event 28305117, LumiSection 78 at 18-Feb-2013 18:22:53.097 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 36th record. Run 200091, Event 28299605, LumiSection 78 at 18-Feb-2013 18:22:53.183 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 37th record. Run 200091, Event 28536555, LumiSection 78 at 18-Feb-2013 18:22:53.314 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 38th record. Run 200091, Event 28480571, LumiSection 78 at 18-Feb-2013 18:22:53.363 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 39th record. Run 200091, Event 28522579, LumiSection 78 at 18-Feb-2013 18:22:53.462 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 40th record. Run 200091, Event 28422405, LumiSection 78 at 18-Feb-2013 18:22:53.557 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 41st record. Run 200091, Event 28536155, LumiSection 78 at 18-Feb-2013 18:22:53.644 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 42nd record. Run 200091, Event 28504347, LumiSection 78 at 18-Feb-2013 18:22:53.728 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 43rd record. Run 200091, Event 28431949, LumiSection 78 at 18-Feb-2013 18:22:53.807 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 44th record. Run 200091, Event 28404269, LumiSection 78 at 18-Feb-2013 18:22:53.907 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 45th record. Run 200091, Event 28420813, LumiSection 78 at 18-Feb-2013 18:22:54.003 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 46th record. Run 200091, Event 28612539, LumiSection 78 at 18-Feb-2013 18:22:54.145 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 47th record. Run 200091, Event 28694659, LumiSection 78 at 18-Feb-2013 18:22:54.234 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 48th record. Run 200091, Event 28683611, LumiSection 78 at 18-Feb-2013 18:22:54.335 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 49th record. Run 200091, Event 28432989, LumiSection 78 at 18-Feb-2013 18:22:54.413 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 50th record. Run 200091, Event 28647675, LumiSection 78 at 18-Feb-2013 18:22:54.496 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 51st record. Run 200091, Event 28609307, LumiSection 78 at 18-Feb-2013 18:22:54.577 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 52nd record. Run 200091, Event 28614651, LumiSection 78 at 18-Feb-2013 18:22:54.686 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 53rd record. Run 200091, Event 28612499, LumiSection 78 at 18-Feb-2013 18:22:54.775 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 54th record. Run 200091, Event 28746003, LumiSection 78 at 18-Feb-2013 18:22:54.873 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 55th record. Run 200091, Event 28686563, LumiSection 78 at 18-Feb-2013 18:22:54.927 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 56th record. Run 200091, Event 28809315, LumiSection 78 at 18-Feb-2013 18:22:55.018 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 57th record. Run 200091, Event 28567651, LumiSection 78 at 18-Feb-2013 18:22:55.113 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 58th record. Run 200091, Event 28827203, LumiSection 78 at 18-Feb-2013 18:22:55.215 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 59th record. Run 200091, Event 28661987, LumiSection 78 at 18-Feb-2013 18:22:55.281 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 60th record. Run 200091, Event 28650275, LumiSection 78 at 18-Feb-2013 18:22:55.374 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 61st record. Run 200091, Event 28874659, LumiSection 78 at 18-Feb-2013 18:22:55.466 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 62nd record. Run 200091, Event 28730643, LumiSection 78 at 18-Feb-2013 18:22:55.526 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 63rd record. Run 200091, Event 28886035, LumiSection 78 at 18-Feb-2013 18:22:55.627 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 64th record. Run 200091, Event 28873227, LumiSection 78 at 18-Feb-2013 18:22:55.691 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 65th record. Run 200091, Event 28873299, LumiSection 78 at 18-Feb-2013 18:22:55.753 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 66th record. Run 200091, Event 28832059, LumiSection 78 at 18-Feb-2013 18:22:55.821 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 67th record. Run 200091, Event 28889843, LumiSection 78 at 18-Feb-2013 18:22:55.914 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 68th record. Run 200091, Event 28923635, LumiSection 78 at 18-Feb-2013 18:22:55.989 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 69th record. Run 200091, Event 28959243, LumiSection 78 at 18-Feb-2013 18:22:56.076 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 70th record. Run 200091, Event 28954043, LumiSection 78 at 18-Feb-2013 18:22:56.138 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 71st record. Run 200091, Event 28659819, LumiSection 78 at 18-Feb-2013 18:22:56.211 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 72nd record. Run 200091, Event 28825891, LumiSection 78 at 18-Feb-2013 18:22:56.312 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 73rd record. Run 200091, Event 29064251, LumiSection 78 at 18-Feb-2013 18:22:56.415 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 74th record. Run 200091, Event 28998523, LumiSection 78 at 18-Feb-2013 18:22:56.486 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 75th record. Run 200091, Event 29085371, LumiSection 78 at 18-Feb-2013 18:22:56.563 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 76th record. Run 200091, Event 29066355, LumiSection 78 at 18-Feb-2013 18:22:56.631 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 77th record. Run 200091, Event 29111227, LumiSection 78 at 18-Feb-2013 18:22:56.715 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 78th record. Run 200091, Event 29113507, LumiSection 78 at 18-Feb-2013 18:22:56.789 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 79th record. Run 200091, Event 29131251, LumiSection 78 at 18-Feb-2013 18:22:56.857 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 80th record. Run 200091, Event 29192755, LumiSection 78 at 18-Feb-2013 18:22:56.948 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 81st record. Run 200091, Event 29157899, LumiSection 78 at 18-Feb-2013 18:22:57.017 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 82nd record. Run 200091, Event 29238851, LumiSection 78 at 18-Feb-2013 18:22:57.119 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 83rd record. Run 200091, Event 29239979, LumiSection 78 at 18-Feb-2013 18:22:57.195 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 84th record. Run 200091, Event 29237907, LumiSection 78 at 18-Feb-2013 18:22:57.250 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 85th record. Run 200091, Event 29287459, LumiSection 78 at 18-Feb-2013 18:22:57.319 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 86th record. Run 200091, Event 29007387, LumiSection 78 at 18-Feb-2013 18:22:57.399 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 87th record. Run 200091, Event 29278395, LumiSection 78 at 18-Feb-2013 18:22:57.482 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 88th record. Run 200091, Event 29355571, LumiSection 78 at 18-Feb-2013 18:22:57.576 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 89th record. Run 200091, Event 29393715, LumiSection 78 at 18-Feb-2013 18:22:57.639 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 90th record. Run 200091, Event 29400659, LumiSection 78 at 18-Feb-2013 18:22:57.768 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 91st record. Run 200091, Event 28728875, LumiSection 78 at 18-Feb-2013 18:22:57.833 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 92nd record. Run 200091, Event 29344819, LumiSection 78 at 18-Feb-2013 18:22:57.957 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 93rd record. Run 200091, Event 29372251, LumiSection 78 at 18-Feb-2013 18:22:58.059 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 94th record. Run 200091, Event 29376211, LumiSection 78 at 18-Feb-2013 18:22:58.131 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 95th record. Run 200091, Event 29386131, LumiSection 78 at 18-Feb-2013 18:22:58.253 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 96th record. Run 200091, Event 29395635, LumiSection 78 at 18-Feb-2013 18:22:58.342 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 97th record. Run 200091, Event 29459539, LumiSection 78 at 18-Feb-2013 18:22:58.470 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 98th record. Run 200091, Event 29428779, LumiSection 78 at 18-Feb-2013 18:22:58.561 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 99th record. Run 200091, Event 29324779, LumiSection 78 at 18-Feb-2013 18:22:58.696 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+Begin processing the 100th record. Run 200091, Event 27911593, LumiSection 78 at 18-Feb-2013 18:22:58.856 CST
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+PU Info not found
+18-Feb-2013 18:22:58 CST  Closed file root://cmsxrootd.hep.wisc.edu//store/user/tapas/2012-10-02-8TeV-53X-PatTuple_ShareFSFix/data_SingleMu_Run2012C_PromptReco_v2_Run198934_201264/patTuple_cfg-80548ADB-9EDE-E111-B86A-0019B9F70468.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 fileAction           -s file_close                             1        1
+    2 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 fileAction           PostEndRun                        
+    2 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+System                  3                   3

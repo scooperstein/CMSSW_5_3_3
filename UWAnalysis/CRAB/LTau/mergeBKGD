@@ -1,0 +1,60 @@
+#!/bin/sh
+
+mkdir sandbox
+cd sandbox
+
+mergeFiles --copy-timeout=90 ZJETS.root /hdfs/store/user/swanson/DYJets-SUB-MCZ
+mergeFiles --copy-timeout=90 W.root /hdfs/store/user/swanson/WJets-SUB-MCW
+mergeFiles --copy-timeout=90 W3JETS.root /hdfs/store/user/swanson/W3Jets-SUB-MCW
+mergeFiles --copy-timeout=90 TT.root /hdfs/store/user/swanson/TTBar-SUB-MC
+mergeFiles --copy-timeout=90 WZ-3L.root /hdfs/store/user/swanson/WZ3L-SUB-MC
+mergeFiles --copy-timeout=90 WW.root /hdfs/store/user/swanson/WW2L-SUB-MC
+mergeFiles --copy-timeout=90 ZZ.root /hdfs/store/user/swanson/ZZ4L-SUB-MC
+mergeFiles --copy-timeout=90 WZ-LLQQ.root /hdfs/store/user/swanson/WZ2L2Q-SUB-MC
+mergeFiles --copy-timeout=90 ZZ-LLQQ.root /hdfs/store/user/swanson/ZZ2L2Q-SUB-MC
+
+
+#mergeFiles --copy-timeout=90 W3JETS.root /hdfs/store/user/swanson/..
+#mergeFiles --copy-timeout=90 T_S.root /hdfs/store/user/swanson/..
+#mergeFiles --copy-timeout=90 T_T.root /hdfs/store/user/swanson/..
+#mergeFiles --copy-timeout=90 T_TW.root /hdfs/store/user/swanson/..
+#mergeFiles --copy-timeout=90 WZ-LLQQ.root /hdfs/store/user/swanson/..
+
+EventWeightsIterative outputFile='ZJETS.root'   doOneD=1   weight=3504   type=3 histoName='MT/results'
+EventWeightsIterative outputFile='W.root'       doOneD=1   weight=36257   type=4 histoName='MT/results'
+EventWeightsIterative outputFile='W3JETS.root'  doOneD=1   weight=352.2   type=4 histoName='MT/results'
+EventWeightsIterative outputFile='TT.root'      doOneD=1   weight=225.2    type=6 histoName='MT/results'
+EventWeightsIterative outputFile='WW.root'      doOneD=1   weight=7.72    type=7 histoName='MT/results'
+EventWeightsIterative outputFile='WZ-3L.root'   doOneD=1   weight=0.9879   type=7 histoName='MT/results'
+EventWeightsIterative outputFile='ZZ.root'      doOneD=1   weight=0.055    type=7  histoName='MT/results'
+EventWeightsIterative outputFile='WZ-LLQQ.root' doOneD=1   weight=6.84    type=7 histoName='MT/results' 
+EventWeightsIterative outputFile='ZZ-LLQQ.root' doOneD=1   weight=0.77    type=7 histoName='MT/results'
+EventWeightsIterative outputFile='tW.root'  	doOneD=1   weight=11.1    type=6 histoName='MT/results' 
+EventWeightsIterative outputFile='tBarW.root'  	doOneD=1   weight=11.1    type=6 histoName='MT/results' 
+ 
+
+#EventWeightsIterative outputFile='WZ-LLQQ.root'  doOneD=1  weight=3.85    type=7 histoName='MT/results' 
+#EventWeightsIterative outputFile='T_S.root'      doOneD=1  weight=4.21     type=6 histoName='MT/results'
+#EventWeightsIterative outputFile='T_T.root'      doOneD=1  weight=64.6     type=6 histoName='MT/results'
+#EventWeightsIterative outputFile='T_TW.root'     doOneD=1  weight=10.6     type=6 histoName='MT/results'
+
+#T_S.root T_T.root T_TW.root
+#hadd TOP.root TT.root
+mv TT.root TOP.root
+#rm TT.root
+
+#WZ-LLQQ.root
+hadd VV.root WW.root WZ-3L.root ZZ.root
+rm WW.root WZ-3L.root ZZ.root
+
+
+ 
+
+
+
+
+
+
+
+
+

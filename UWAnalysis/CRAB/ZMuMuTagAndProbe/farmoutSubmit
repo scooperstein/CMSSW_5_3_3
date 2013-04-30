@@ -1,0 +1,15 @@
+#!/bin/sh
+voms-proxy-init --voms cms --valid 100:00
+
+cat TP.py >TPMC.py
+cat CONDORPT.py >>TPMC.py
+
+farmoutAnalysisJobs $1  --skip-existing-output --input-files-per-job=3 --output-dir=.  --input-dbs-path=/TTJets_TuneZ2_7TeV-madgraph-tauola/Summer11-PU_S4_START42_V11-v1/AODSIM TOP $CMSSW_BASE $CMSSW_BASE/src/UWAnalysis/CRAB/MuMu/MMMC.py
+
+farmoutAnalysisJobs $1 --input-files-per-job=10   --input-dir=/store/user/tapas/2012-07-18-8TeV-PatTuple/data_SingleMu_Run2012B_PromptReco_v1_Run193752_196531/ ZMuMuDataTP $CMSSW_BASE /afs/hep.wisc.edu/user/aglevine/TagProbe/src/UWAnalysis/CRAB/ZMuMuTagAndProbe/TP.py 
+
+
+rm MMMC.py
+
+
+

@@ -1,0 +1,391 @@
+opening config file test_config.txt 
+runCount = 0 
+pt_lo: 10 eta_lo:0 
+(matchPass==1&&(abs(eta)>0&&abs(eta)<0.78)&&(IDPass==1&&SIPPass==1&&ISOPass==1)&&pt>10&&pt<15) 
+(matchPass==1&&(abs(eta)>0&&abs(eta)<0.78)&&(IDPass==0||SIPPass==0||ISOPass==0)&&pt>10&&pt<15) 
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooRealVar::mass
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooRealVar::bkrdRange
+Background pdfs declared
+about the draw the cut
+drew the cut
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(DYeemc): fit range of variable mass expanded to nearest bin boundaries: [68,110] --> [68,110]
+created a roodatahist
+created a roohistpdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset DYeemc
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooHistPdf::DYee
+imported w
+done with everything
+about the draw the cut
+drew the cut
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(DYeeFailmc): fit range of variable mass expanded to nearest bin boundaries: [68,110] --> [68,110]
+created a roodatahist
+created a roohistpdf
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing dataset DYeeFailmc
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooHistPdf::DYeeFail
+imported w
+done with everything
+about to create a data tree
+created data tree
+drew the cut
+Passed Events in Data 1617.000000
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(data): fit range of variable mass expanded to nearest bin boundaries: [68,110] --> [68,110]
+Failed Events in Data 3041.000000
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(dataFail): fit range of variable mass expanded to nearest bin boundaries: [68,110] --> [68,110]
+Integral of-DYee----------- 6259.427355
+Integral of-DYee----------- 353.745220
+Background Pass Region Yield 353.745209
+It's DYee!!
+Signal: DYee
+Integral of-DYee----------- 2014.485733
+Integral of-DYee----------- 357.468863
+Background Fail Region Yield 357.468872
+[#1] INFO:ObjectHandling -- RooWorkspace::import(w) importing RooFormulaVar::nSigFail
+[#1] INFO:Minization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+[#1] INFO:Fitting -- RooAbsTestStatistic::initSimMode: creating slave calculator #0 for state Pass (1400 dataset entries)
+[#1] INFO:Eval -- RooRealVar::setRange(mass) new range named 'refrange_fft_SigGaus' created with bounds [68,110]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x1068ce10 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass,weight) with code 0
+[#1] INFO:Fitting -- RooAbsTestStatistic::initSimMode: creating slave calculator #1 for state Fail (1400 dataset entries)
+[#1] INFO:Eval -- RooRealVar::setRange(mass) new range named 'refrange_fft_SigGausFail' created with bounds [68,110]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x1078c1c0 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass,weight) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x107a5600 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x10633430 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (DYee)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (SigGaus,background1)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x107998f0 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x107cee40 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (DYee)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (SigGausFail,background1Fail)
+ **********
+ **   13 **MIGRAD        5000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ MINUIT WARNING IN MIGrad    
+ ============== VARIABLE1 IS AT ITS UPPER ALLOWED LIMIT.
+ MINUIT WARNING IN MIGrad    
+ ============== VARIABLE2 IS AT ITS UPPER ALLOWED LIMIT.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=98612.4 FROM MIGRAD    STATUS=INITIATE      179 CALLS         180 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  b1          -2.32469e-01   7.00000e-01   0.00000e+00   1.73376e-01
+   2  b2          -2.85804e-01   7.00000e-01   0.00000e+00   1.83831e+02
+   3  eff          9.00000e-01   5.00000e-02   0.00000e+00   6.25087e+03
+   4  mg           0.00000e+00   6.00000e-01   0.00000e+00  -1.51314e+02
+   5  mgFail       0.00000e+00   6.00000e-01   0.00000e+00   3.11031e+02
+   6  nExp         3.63745e+02   1.81873e+02   0.00000e+00   5.93783e+05
+   7  nExpFail     3.57469e+02   1.78734e+02   0.00000e+00   1.49865e+03
+   8  nTotal       1.25189e+05   6.25943e+04   0.00000e+00   3.41333e+06
+   9  sigmaGaus    1.91660e+00   5.00000e-02   0.00000e+00  -5.20748e+00
+  10  sigmaGausFail   4.83172e+00   2.50000e-02   3.31113e+00   1.27076e+02
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 10 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 2.79725 added to diagonal of error matrix
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-12449.2 FROM MIGRAD    STATUS=CONVERGED     682 CALLS         683 TOTAL
+                     EDM=0.000136675    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  b1          -1.10134e-01   5.72046e-02   4.43332e-03  -6.12074e-02
+   2  b2          -6.79150e-02   3.56798e-03   2.65409e-04   8.48624e-01
+   3  eff          6.85423e-01   2.36374e-02   2.81029e-03  -4.10575e-02
+   4  mg           8.11607e-01   1.31829e-01   3.43928e-03  -1.66205e-01
+   5  mgFail       5.54915e-01   5.42496e-01   1.35401e-02  -1.02377e-02
+   6  nExp         3.62969e+01   2.14695e+01   6.96759e-06** at limit **
+   7  nExpFail     2.31553e+03   8.67381e+01   1.43754e-04  -5.01808e-01
+   8  nTotal       2.30606e+03   8.91458e+01   8.63922e-06  -1.74783e+01
+   9  sigmaGaus    1.68298e+00   1.99044e-01   4.10181e-03  -4.74367e-02
+  10  sigmaGausFail   4.99998e+00   3.05021e+00   6.10166e-02  -6.43038e-03
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 10    ERR DEF=0.5
+  3.277e-03  9.821e-08 -8.481e-05  9.243e-05 -2.535e-06  6.309e-01  2.931e-03 -6.331e-01 -1.726e-03  5.756e-08 
+  9.821e-08  1.273e-05  5.544e-05  3.490e-08  5.483e-04  6.717e-05  1.868e-01 -1.869e-01 -1.165e-07  3.180e-06 
+ -8.481e-05  5.544e-05  5.596e-04 -2.968e-05 -2.125e-04 -5.726e-02  1.545e+00 -1.488e+00  9.966e-05  2.660e-05 
+  9.243e-05  3.490e-08 -2.968e-05  1.739e-02 -8.891e-07  2.201e-01  1.041e-03 -2.216e-01  4.930e-03  2.040e-08 
+ -2.535e-06  5.483e-04 -2.125e-04 -8.891e-07  2.977e-01 -1.715e-03 -7.189e-01  7.265e-01  2.983e-06 -1.295e-04 
+  6.309e-01  6.717e-05 -5.726e-02  2.201e-01 -1.715e-03  4.609e+02  2.003e+00 -4.275e+02 -7.400e-01  3.927e-05 
+  2.931e-03  1.868e-01  1.545e+00  1.041e-03 -7.189e-01  2.003e+00  7.524e+03 -5.211e+03 -3.474e-03  8.965e-02 
+ -6.331e-01 -1.869e-01 -1.488e+00 -2.216e-01  7.265e-01 -4.275e+02 -5.211e+03  7.947e+03  7.440e-01 -8.974e-02 
+ -1.726e-03 -1.165e-07  9.966e-05  4.930e-03  2.983e-06 -7.400e-01 -3.474e-03  7.440e-01  3.966e-02 -6.815e-08 
+  5.756e-08  3.180e-06  2.660e-05  2.040e-08 -1.295e-04  3.927e-05  8.965e-02 -8.974e-02 -6.815e-08  7.840e-05 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10
+        1  0.51787   1.000  0.000 -0.063  0.012 -0.000  0.513  0.001 -0.124 -0.151  0.000
+        2  0.75000   0.000  1.000  0.657  0.000  0.282  0.001  0.604 -0.588 -0.000  0.101
+        3  0.84360  -0.063  0.657  1.000 -0.010 -0.016 -0.113  0.753 -0.706  0.021  0.127
+        4  0.21931   0.012  0.000 -0.010  1.000 -0.000  0.078  0.000 -0.019  0.188  0.000
+        5  0.40711  -0.000  0.282 -0.016 -0.000  1.000 -0.000 -0.015  0.015  0.000 -0.027
+        6  0.61837   0.513  0.001 -0.113  0.078 -0.000  1.000  0.001 -0.223 -0.173  0.000
+        7  0.78733   0.001  0.604  0.753  0.000 -0.015  0.001  1.000 -0.674 -0.000  0.117
+        8  0.79692  -0.124 -0.588 -0.706 -0.019  0.015 -0.223 -0.674  1.000  0.042 -0.114
+        9  0.27411  -0.151 -0.000  0.021  0.188  0.000 -0.173 -0.000  0.042  1.000 -0.000
+       10  0.13773   0.000  0.101  0.127  0.000 -0.027  0.000  0.117 -0.114 -0.000  1.000
+ **********
+ **   18 **HESSE        5000
+ **********
+ MINUIT WARNING IN HESSE   
+ ============== Negative diagonal element 10 in Error Matrix
+ MINUIT WARNING IN HESSE   
+ ============== 2.81527 added to diagonal of error matrix
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=-12449.2 FROM HESSE     STATUS=OK             86 CALLS         769 TOTAL
+                     EDM=0.00013985    STRATEGY= 1      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  b1          -1.10134e-01   5.73186e-02   1.77333e-04   1.31927e+00
+   2  b2          -6.79150e-02   3.55252e-03   5.30819e-05   1.37348e+00
+   3  eff          6.85423e-01   2.34801e-02   5.62058e-04   1.01383e-01
+   4  mg           8.11607e-01   1.32117e-01   6.87857e-04   2.73950e-01
+   5  mgFail       5.54915e-01   5.41956e-01   2.70802e-03  -3.32764e+00
+   6  nExp         3.62969e+01   2.14988e+01   2.78704e-07  -1.57042e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   7  nExpFail     2.31553e+03   8.62744e+01   2.87508e-05  -1.40966e+00
+   8  nTotal       2.30606e+03   8.86803e+01   1.72784e-06  -1.56119e+00
+   9  sigmaGaus    1.68298e+00   1.99466e-01   8.20362e-04  -7.48044e-01
+  10  sigmaGausFail   4.99998e+00   3.04098e+00   1.22033e-02   1.57434e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 10    ERR DEF=0.5
+  3.290e-03  1.077e-07 -8.574e-05  1.077e-04 -8.455e-07  6.368e-01  3.041e-03 -6.397e-01 -1.727e-03  1.524e-08 
+  1.077e-07  1.262e-05  5.455e-05  3.709e-08  5.473e-04  7.220e-05  1.839e-01 -1.840e-01 -1.250e-07  8.894e-07 
+ -8.574e-05  5.455e-05  5.522e-04 -2.944e-05 -2.084e-04 -5.735e-02  1.521e+00 -1.463e+00  9.936e-05  7.425e-06 
+  1.077e-04  3.709e-08 -2.944e-05  1.747e-02 -2.899e-07  2.187e-01  1.047e-03 -2.197e-01  5.231e-03  5.259e-09 
+ -8.455e-07  5.473e-04 -2.084e-04 -2.899e-07  2.971e-01 -5.663e-04 -7.033e-01  7.050e-01  9.810e-07 -3.582e-05 
+  6.368e-01  7.220e-05 -5.735e-02  2.187e-01 -5.663e-04  4.622e+02  2.039e+00 -4.279e+02 -7.380e-01  1.022e-05 
+  3.041e-03  1.839e-01  1.521e+00  1.047e-03 -7.033e-01  2.039e+00  7.443e+03 -5.130e+03 -3.530e-03  2.504e-02 
+ -6.397e-01 -1.840e-01 -1.463e+00 -2.197e-01  7.050e-01 -4.279e+02 -5.130e+03  7.864e+03  7.413e-01 -2.505e-02 
+ -1.727e-03 -1.250e-07  9.936e-05  5.231e-03  9.810e-07 -7.380e-01 -3.530e-03  7.413e-01  3.983e-02 -1.769e-08 
+  1.524e-08  8.894e-07  7.425e-06  5.259e-09 -3.582e-05  1.022e-05  2.504e-02 -2.505e-02 -1.769e-08  7.703e-05 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10
+        1  0.52082   1.000  0.001 -0.064  0.014 -0.000  0.516  0.001 -0.126 -0.151  0.000
+        2  0.74746   0.001  1.000  0.653  0.000  0.283  0.001  0.600 -0.584 -0.000  0.029
+        3  0.84130  -0.064  0.653  1.000 -0.009 -0.016 -0.114  0.750 -0.702  0.021  0.036
+        4  0.22862   0.014  0.000 -0.009  1.000 -0.000  0.077  0.000 -0.019  0.198  0.000
+        5  0.40563  -0.000  0.283 -0.016 -0.000  1.000 -0.000 -0.015  0.015  0.000 -0.007
+        6  0.61974   0.516  0.001 -0.114  0.077 -0.000  1.000  0.001 -0.224 -0.172  0.000
+        7  0.78473   0.001  0.600  0.750  0.000 -0.015  0.001  1.000 -0.671 -0.000  0.033
+        8  0.79450  -0.126 -0.584 -0.702 -0.019  0.015 -0.224 -0.671  1.000  0.042 -0.032
+        9  0.28110  -0.151 -0.000  0.021  0.198  0.000 -0.172 -0.000  0.042  1.000 -0.000
+       10  0.03907   0.000  0.029  0.036  0.000 -0.007  0.000  0.033 -0.032 -0.000  1.000
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+--------------Efficiency = 0.685423 +- 0.023480-----------------
+--------------Efficiency = 0.685423 +- 0.023480-----------------
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 1617 events out of 4658 total events
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sum) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x105e6e80 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass) with code 0
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) directly selected PDF components: (background1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sum) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x105b1e30 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) directly selected PDF components: (SigGaus)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) indirectly selected PDF components: (DYee,gauss)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sum) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x1079a410 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 3041 events out of 4658 total events
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sumFail) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x10812590 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass) with code 0
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) directly selected PDF components: (background1Fail)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sumFail) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x10768190 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) directly selected PDF components: (SigGausFail)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) indirectly selected PDF components: (DYee,gaussFail)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sumFail) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x10829870 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
+-----0.000000------- 
+Line 617-DYee----------- 6259.427355
+Line 617-DYee----------- 2014.485733
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(MCfail): fit range of variable mass expanded to nearest bin boundaries: [68,110] --> [68,110]
+[#1] INFO:DataHandling -- RooDataHist::adjustBinning(MCHistfit): fit range of variable mass expanded to nearest bin boundaries: [68,110] --> [68,110]
+[#1] INFO:Minization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Minization -- RooMinuit::optimizeConst: activating const optimization
+[#1] INFO:Fitting -- RooAbsTestStatistic::initSimMode: creating slave calculator #0 for state Pass (1400 dataset entries)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x1099b080 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Fitting -- RooAbsTestStatistic::initSimMode: creating slave calculator #1 for state Fail (1400 dataset entries)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x109d0cd0 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x109cb1b0 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x10946a20 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (DYee)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (SigGaus,background1)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x10a0d820 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x10a15640 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass,weight) with code 0 from preexisting content.
+[#1] INFO:Minization --  The following expressions have been identified as constant and will be precalculated and cached: (DYee)
+[#1] INFO:Minization --  The following expressions will be evaluated in cache-and-track mode: (SigGausFail,background1Fail)
+ **********
+ **   13 **MIGRAD        5000           1
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  1.  CONVERGENCE WHEN EDM .LT. 1.00e-03
+ FCN=-26959 FROM MIGRAD    STATUS=INITIATE      167 CALLS         168 TOTAL
+                     EDM= unknown      STRATEGY= 1      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  b1          -1.41735e-02   5.73186e-02   0.00000e+00  -1.33119e+03
+   2  b2          -6.79150e-02   3.55252e-03   0.00000e+00  -3.26006e+03
+   3  eff          6.85423e-01   2.34801e-02   0.00000e+00  -7.53985e+02
+   4  mg           8.11607e-01   1.32117e-01   0.00000e+00  -2.39747e+02
+   5  mgFail       1.96997e-01   5.41956e-01  -1.20330e-01  -1.06722e+02
+   6  nExp         3.27371e+03   2.14988e+01   0.00000e+00   4.21477e+04
+   7  nExpFail     2.31553e+03   8.62744e+01   0.00000e+00   1.26964e+04
+   8  nTotal       2.30606e+03   8.86803e+01   0.00000e+00  -3.08203e+05
+   9  sigmaGaus    1.68298e+00   1.99466e-01   0.00000e+00   5.03205e+02
+  10  sigmaGausFail   5.22205e-02   3.04098e+00   0.00000e+00   9.08732e-01
+                               ERR DEF= 0.5
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+ MINUIT WARNING IN HESSE
+ ============== Second derivative enters zero, param 5
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -9.6656e+02 -6.7738e+00 -3.0429e-02  3.8062e-01  1.0525e+00  1.1196e+00  1.4473e+00  2.0306e+00  8.7738e+00  9.6856e+02
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 967.531027 TO DIAGONAL.
+ FCN=-29440.1 FROM HESSE     STATUS=NOT POSDEF     98 CALLS         902 TOTAL
+                     EDM=0.160267    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  b1          -8.84394e-03   3.73406e-02   5.00000e-01  -9.10010e-05
+   2  b2          -5.30543e-02   1.28501e-04   7.80450e-04   7.58559e-01
+   3  eff          8.36681e-01   1.55365e-04   1.93500e-03  -3.89207e-03
+   4  mg           1.63046e+00   1.02315e-01   1.54133e-01   5.76883e-03
+   5  mgFail       2.55441e+00   3.53553e-01   5.10000e-01   2.56337e+00
+   6  nExp         8.39097e-02   3.12505e-01   1.18550e-04** at limit **
+   7  nExpFail     7.92776e+02   1.17087e+00   2.56748e-04   2.10576e+00
+   8  nTotal       7.48144e+03   2.84064e+00   1.21103e-05   3.36687e+01
+   9  sigmaGaus    7.15108e-01   3.44021e-02   5.07038e-02  -1.78919e-02
+  10  sigmaGausFail   5.22419e-02   3.97173e+00   4.67993e-01   1.83722e-03
+                               ERR DEF= 0.5
+ MIGRAD FAILS TO FIND IMPROVEMENT
+ MIGRAD TERMINATED WITHOUT CONVERGENCE.
+ FCN=-29440.1 FROM MIGRAD    STATUS=FAILED        912 CALLS         913 TOTAL
+                     EDM=0.160267    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  b1          -8.84394e-03   3.73406e-02   0.00000e+00  -9.10010e-05
+   2  b2          -5.30543e-02   1.28501e-04   0.00000e+00   7.58559e-01
+   3  eff          8.36681e-01   1.55365e-04   0.00000e+00  -3.89207e-03
+   4  mg           1.63046e+00   1.02315e-01  -0.00000e+00   5.76883e-03
+   5  mgFail       2.55441e+00   3.53553e-01  -0.00000e+00   2.56337e+00
+   6  nExp         8.39097e-02   3.12505e-01   0.00000e+00** at limit **
+   7  nExpFail     7.92776e+02   1.17087e+00   0.00000e+00   2.10576e+00
+   8  nTotal       7.48144e+03   2.84064e+00  -0.00000e+00   3.36687e+01
+   9  sigmaGaus    7.15108e-01   3.44021e-02   0.00000e+00  -1.78919e-02
+  10  sigmaGausFail   5.22419e-02   3.97173e+00   0.00000e+00   1.83722e-03
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 10    ERR DEF=0.5
+  1.325e-03  1.516e-16  6.807e-12  2.880e-08 -5.178e-13 -9.122e-05  4.273e-12  2.546e-07 -1.358e-09  1.237e-12 
+  1.516e-16  1.651e-08  2.886e-12  5.862e-18 -1.556e-07 -1.401e-13  3.371e-08 -2.099e-08 -1.680e-18  3.721e-07 
+  6.807e-12  2.886e-12  2.414e-08  4.152e-13 -1.462e-08 -6.275e-09  8.169e-08 -5.099e-08 -2.004e-14  3.498e-08 
+  2.880e-08  5.862e-18  4.152e-13  1.047e-02 -6.172e-14 -5.510e-06  2.599e-13  1.553e-08  3.747e-06  1.476e-13 
+ -5.178e-13 -1.556e-07 -1.462e-08 -6.172e-14  1.272e-01  6.979e-10 -1.705e-04  1.067e-04 -3.399e-15 -3.042e-01 
+ -9.122e-05 -1.401e-13 -6.275e-09 -5.510e-06  6.979e-10  9.766e-02 -3.928e-09 -2.347e-04  2.659e-07 -1.669e-09 
+  4.273e-12  3.371e-08  8.169e-08  2.599e-13 -1.705e-04 -3.928e-09  1.371e+00 -5.952e-04 -1.253e-14  4.079e-04 
+  2.546e-07 -2.099e-08 -5.099e-08  1.553e-08  1.067e-04 -2.347e-04 -5.952e-04  8.069e+00 -7.495e-10 -2.553e-04 
+ -1.358e-09 -1.680e-18 -2.004e-14  3.747e-06 -3.399e-15  2.659e-07 -1.253e-14 -7.495e-10  1.184e-03  8.134e-15 
+  1.237e-12  3.721e-07  3.498e-08  1.476e-13 -3.042e-01 -1.669e-09  4.079e-04 -2.553e-04  8.134e-15  7.293e-01 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10
+        1  0.00802   1.000  0.000  0.000  0.000 -0.000 -0.008  0.000  0.000 -0.000  0.000
+        2  0.00341   0.000  1.000  0.000  0.000 -0.003 -0.000  0.000 -0.000 -0.000  0.003
+        3  0.00057   0.000  0.000  1.000  0.000 -0.000 -0.000  0.000 -0.000 -0.000  0.000
+        4  0.00108   0.000  0.000  0.000  1.000 -0.000 -0.000  0.000  0.000  0.001  0.000
+        5  0.99900  -0.000 -0.003 -0.000 -0.000  1.000  0.000 -0.000  0.000 -0.000 -0.999
+        6  0.00803  -0.008 -0.000 -0.000 -0.000  0.000  1.000 -0.000 -0.000  0.000 -0.000
+        7  0.00067   0.000  0.000  0.000  0.000 -0.000 -0.000  1.000 -0.000 -0.000  0.000
+        8  0.00036   0.000 -0.000 -0.000  0.000  0.000 -0.000 -0.000  1.000 -0.000 -0.000
+        9  0.00106  -0.000 -0.000 -0.000  0.001 -0.000  0.000 -0.000 -0.000  1.000  0.000
+       10  0.99900   0.000  0.003  0.000  0.000 -0.999 -0.000  0.000 -0.000  0.000  1.000
+ ERR MATRIX NOT POS-DEF
+ **********
+ **   18 **HESSE        5000
+ **********
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -9.6656e+02 -6.7816e+01  3.7966e-01  9.0259e-01  1.0528e+00  1.0975e+00  1.1203e+00  1.4473e+00  6.9816e+01  9.6856e+02
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING 967.531027 TO DIAGONAL.
+ FCN=-29440.1 FROM HESSE     STATUS=NOT POSDEF    114 CALLS        1027 TOTAL
+                     EDM=0.320533    STRATEGY= 1      ERR MATRIX NOT POS-DEF
+  EXT PARAMETER                APPROXIMATE     INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  b1          -8.84394e-03   3.75273e-02   5.00000e-01   1.49969e+00
+   2  b2          -5.30543e-02   1.28500e-04   1.56090e-04   1.39646e+00
+   3  eff          8.36681e-01   1.55364e-04   7.74001e-05   5.62586e-01
+   4  mg           1.63046e+00   6.26668e-02   2.18580e-01   5.74585e-01
+   5  mgFail       2.55441e+00   3.53553e-01   5.10000e-01   1.01878e+00
+   6  nExp         8.39097e-02   4.80053e-02   1.01200e-03  -1.57081e+00
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+   7  nExpFail     7.92776e+02   1.17087e+00   5.13496e-05  -1.47658e+00
+   8  nTotal       7.48144e+03   2.84064e+00   2.42205e-06  -1.55350e+00
+   9  sigmaGaus    7.15108e-01   5.91222e-03   2.06872e-01  -2.07463e+00
+  10  sigmaGausFail   5.22419e-02   3.97173e+00   4.67993e-01  -1.52823e+00
+                               ERR DEF= 0.5
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR= 10    ERR DEF=0.5
+  1.332e-03  1.858e-15  8.404e-11  5.495e-08 -9.118e-12 -1.245e-04  5.223e-11  3.142e-06 -3.101e-11  2.181e-11 
+  1.858e-15  1.651e-08  2.900e-12  1.629e-17 -1.559e-07 -3.403e-14  3.392e-08 -2.116e-08 -5.156e-20  3.728e-07 
+  8.404e-11  2.900e-12  2.414e-08  5.318e-13 -1.462e-08 -1.538e-09  8.165e-08 -5.092e-08 -3.037e-16  3.498e-08 
+  5.495e-08  1.629e-17  5.318e-13  3.928e-03 -6.335e-14 -7.380e-07  3.308e-13  1.988e-08  3.727e-08  1.516e-13 
+ -9.118e-12 -1.559e-07 -1.462e-08 -6.335e-14  1.272e-01  1.713e-10 -1.709e-04  1.067e-04  7.504e-17 -3.042e-01 
+ -1.245e-04 -3.403e-14 -1.538e-09 -7.380e-07  1.713e-10  2.305e-03 -9.572e-10 -5.752e-05  4.219e-10 -4.098e-10 
+  5.223e-11  3.392e-08  8.165e-08  3.308e-13 -1.709e-04 -9.572e-10  1.371e+00 -5.959e-04 -1.895e-16  4.089e-04 
+  3.142e-06 -2.116e-08 -5.092e-08  1.988e-08  1.067e-04 -5.752e-05 -5.959e-04  8.069e+00 -1.135e-11 -2.553e-04 
+ -3.101e-11 -5.156e-20 -3.037e-16  3.727e-08  7.504e-17  4.219e-10 -1.895e-16 -1.135e-11  3.495e-05 -1.795e-16 
+  2.181e-11  3.728e-07  3.498e-08  1.516e-13 -3.042e-01 -4.098e-10  4.089e-04 -2.553e-04 -1.795e-16  7.293e-01 
+ERR MATRIX NOT POS-DEF
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5      6      7      8      9     10
+        1  0.07105   1.000  0.000  0.000  0.000 -0.000 -0.071  0.000  0.000 -0.000  0.000
+        2  0.00341   0.000  1.000  0.000  0.000 -0.003 -0.000  0.000 -0.000 -0.000  0.003
+        3  0.00059   0.000  0.000  1.000  0.000 -0.000 -0.000  0.000 -0.000 -0.000  0.000
+        4  0.00027   0.000  0.000  0.000  1.000 -0.000 -0.000  0.000  0.000  0.000  0.000
+        5  0.99900  -0.000 -0.003 -0.000 -0.000  1.000  0.000 -0.000  0.000  0.000 -0.999
+        6  0.07105  -0.071 -0.000 -0.000 -0.000  0.000  1.000 -0.000 -0.000  0.000 -0.000
+        7  0.00067   0.000  0.000  0.000  0.000 -0.000 -0.000  1.000 -0.000 -0.000  0.000
+        8  0.00049   0.000 -0.000 -0.000  0.000  0.000 -0.000 -0.000  1.000 -0.000 -0.000
+        9  0.00010  -0.000 -0.000 -0.000  0.000  0.000  0.000 -0.000 -0.000  1.000 -0.000
+       10  0.99900   0.000  0.003  0.000  0.000 -0.999 -0.000  0.000 -0.000 -0.000  1.000
+ ERR MATRIX NOT POS-DEF
+[#1] INFO:Minization -- RooMinuit::optimizeConst: deactivating const optimization
+--------------Efficiency = 0.836681 +- 0.000155-----------------
+[#1] INFO:InputArguments -- RooAbsData::plotOn(combDataMC) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 6259.43 events out of 8273.91 total events
+getsHere Line466 
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sum) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x109ecb20 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass) with code 0
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) directly selected PDF components: (background1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sum) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x1095f4b0 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) directly selected PDF components: (SigGaus)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sum) indirectly selected PDF components: (DYee,gauss)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sum) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGaus) creating new cache 0x10966a80 with pdf DYee_CONV_gauss_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
+[#1] INFO:InputArguments -- RooAbsData::plotOn(combDataMC) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 2014.49 events out of 8273.91 total events
+Passes to Here Line 498 ----
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sumFail) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x10971fa0 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass) with code 0
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) directly selected PDF components: (background1Fail)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sumFail) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x10981210 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooSimultaneous::plotOn(smodel) plot on mass represents a slice in the index category (sample)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) directly selected PDF components: (SigGausFail)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(sumFail) indirectly selected PDF components: (DYee,gaussFail)
+[#1] INFO:Plotting -- RooAbsReal::plotOn(sumFail) slice variable sample was not projected anyway
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(SigGausFail) creating new cache 0x109f7830 with pdf DYee_CONV_gaussFail_CACHE_Obs[mass] for nset (mass) with code 0 from preexisting content.
